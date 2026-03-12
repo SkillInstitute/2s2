@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adilqadri | Luxury Attar Perfumes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold-primary: #D4AF37;
+            --gold-light: #F4E8C1;
+            --gold-dark: #B8941F;
+            --white-cream: #FAF9F6;
+            --black-luxury: #1A1A1A;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #FAF9F6 0%, #F5F5DC 100%);
+            overflow-x: hidden;
+        }
+        
+        .font-serif-display {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .font-serif-elegant {
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        /* Golden Top Bar Animation */
+        .golden-bar {
+            background: linear-gradient(90deg, #D4AF37 0%, #F4E8C1 25%, #D4AF37 50%, #F4E8C1 75%, #D4AF37 100%);
+            background-size: 200% 100%;
+            animation: shimmer 3s ease-in-out infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+        
+        /* Luxury Hover Effects */
+        .luxury-card {
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        
+        .luxury-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(212, 175, 55, 0.25);
+            border-color: rgba(212, 175, 55, 0.5);
+        }
+        
+        /* Image Gallery Hover */
+        .gallery-img {
+            transition: all 0.5s ease;
+            filter: brightness(0.95);
+        }
+        
+        .gallery-img:hover {
+            transform: scale(1.05);
+            filter: brightness(1.05);
+        }
+        
+        /* Price Cut Effect */
+        .price-cut {
+            position: relative;
+            display: inline-block;
+            color: #9CA3AF;
+        }
+        
+        .price-cut::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 100%;
+            height: 1px;
+            background: #EF4444;
+            transform: rotate(-5deg);
+        }
+        
+        /* Gold Button */
+        .btn-gold {
+            background: linear-gradient(135deg, #D4AF37 0%, #B8941F 100%);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-gold::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: left 0.5s;
+        }
+        
+        .btn-gold:hover::before {
+            left: 100%;
+        }
+        
+        .btn-gold:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
+        }
+        
+        /* Scroll Reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Rating Stars */
+        .star-gold {
+            color: #D4AF37;
+        }
+        
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #FAF9F6;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #D4AF37;
+            border-radius: 4px;
+        }
+        
+        /* Badge Animation */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
+        }
+        
+        .badge-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        /* Gradient Text */
+        .text-gradient-gold {
+            background: linear-gradient(135deg, #D4AF37 0%, #B8941F 50%, #D4AF37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="antialiased text-gray-800">
+
+    <!-- Golden Upper Bar -->
+    <div class="golden-bar h-1.5 w-full fixed top-0 z-50"></div>
+
+    <!-- Header -->
+    <header class="pt-8 pb-6 px-4 md:px-8 lg:px-16 bg-white/50 backdrop-blur-md sticky top-1.5 z-40 border-b border-gold-100">
+        <div class="max-w-7xl mx-auto flex justify-center items-center">
+            <div class="text-center reveal active">
+                <img src="https://www.adilqadri.com/cdn/shop/files/Logo.png?v=1694244694&width=280" 
+                     alt="Adilqadri" 
+                     class="h-16 md:h-20 w-auto mx-auto drop-shadow-lg hover:scale-105 transition-transform duration-500 cursor-pointer">
+                <p class="font-serif-elegant text-gold-600 text-lg mt-2 tracking-widest text-[#B8941F] italic">Luxury Attar Perfumes</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 py-12 space-y-20">
+
+        <!-- Product 1: Shanaya Pack of 3 -->
+        <section class="reveal">
+            <div class="luxury-card rounded-2xl p-6 md:p-10">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <!-- Image Gallery -->
+                    <div class="space-y-4">
+                        <div class="relative overflow-hidden rounded-xl bg-white shadow-inner">
+                            <img src="https://www.adilqadri.com/cdn/shop/files/3_8fe231e9-11f9-4b27-bd30-6ae44c457281.jpg?v=1755198011&width=900" 
+                                 alt="Shanaya Pack of 3" 
+                                 class="gallery-img w-full h-96 object-cover cursor-zoom-in"
+                                 onclick="openLightbox(this.src)">
+                            <div class="absolute top-4 right-4 bg-gradient-to-r from-red-500 to-red-600 text-white px-4 py-1 rounded-full text-sm font-semibold badge-float shadow-lg">
+                                PACK OF 3
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="overflow-hidden rounded-lg bg-white shadow-md">
+                                <img src="https://www.adilqadri.com/cdn/shop/files/WhatsApp_Image_2025-10-14_at_21.55.16.jpg?v=1760459249&width=900" 
+                                     alt="Shanaya Detail" 
+                                     class="gallery-img w-full h-48 object-cover cursor-pointer"
+                                     onclick="openLightbox(this.src)">
+                            </div>
+                            <div class="bg-gradient-to-br from-[#D4AF37]/20 to-[#F4E8C1]/40 rounded-lg flex items-center justify-center p-4 border border-[#D4AF37]/30">
+                                <div class="text-center">
+                                    <p class="font-serif-display text-2xl text-[#B8941F] font-bold">5.5ml × 3</p>
+                                    <p class="text-sm text-gray-600 mt-1 font-serif-elegant">Premium Roll-On</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Details -->
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-2 mb-2">
+                            <div class="flex text-[#D4AF37]">
+                                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                            </div>
+                            <span class="text-sm font-semibold text-gray-700">4.7</span>
+                            <span class="text-gray-400">|</span>
+                            <span class="text-sm text-gray-600">15,147 ratings</span>
+                            <span class="text-gray-400">|</span>
+                            <span class="text-sm font-medium text-[#B8941F]">100k+ Units Sold</span>
+                        </div>
+
+                        <h2 class="font-serif-display text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
+                            Adilqadri Shanaya Luxury Attar Perfume
+                        </h2>
+
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-[#D4AF37]/10 text-[#B8941F] rounded-full text-sm font-medium border border-[#D4AF37]/20">Non-Alcoholic</span>
+                            <span class="px-3 py-1 bg-[#D4AF37]/10 text-[#B8941F] rounded-full text-sm font-medium border border-[#D4AF37]/20">Unisex</span>
+                            <span class="px-3 py-1 bg-[#D4AF37]/10 text-[#B8941F] rounded-full text-sm font-medium border border-[#D4AF37]/20">Roll-On</span>
+                            <span class="px-3 py-1 bg-[#D4AF37]/10 text-[#B8941F] rounded-full text-sm font-medium border border-[#D4AF37]/20">Extra Long Lasting</span>
+                            <span class="px-3 py-1 bg-[#D4AF37]/10 text-[#B8941F] rounded-full text-sm font-medium border border-[#D4AF37]/20">Arabic & French Blend</span>
+                            <span class="px-3 py-1 bg-[#D4AF37]/10 text-[#B8941F] rounded-full text-sm font-medium border border-[#D4AF37]/20">Sweet</span>
+                        </div>
+
+                        <div class="pt-4 border-t border-gray-200">
+                            <p class="font-serif-elegant text-xl text-gray-600 italic mb-4">Pack Of 3 - Shanaya 5.5ml</p>
+                            <div class="flex items-baseline gap-3 mb-2">
+                                <span class="font-serif-display text-4xl font-bold text-gradient-gold">₹899</span>
+                                <span class="price-cut text-xl">₹1,797</span>
+                            </div>
+                            <p class="text-sm text-green-600 font-medium">You save ₹898 (50% OFF)</p>
+                        </div>
+
+                        <a href="/Shanaya" class="btn-gold inline-block w-full md:w-auto px-10 py-4 text-white font-semibold rounded-full text-center tracking-wide uppercase text-sm shadow-xl hover:shadow-2xl">
+                            Buy Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product 2: The Story -->
+        <section class="reveal">
+            <div class="luxury-card rounded-2xl p-6 md:p-10">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <!-- Product Details (Left this time for variety) -->
+                    <div class="space-y-6 order-2 md:order-1">
+                        <div class="flex items-center gap-2 mb-2">
+                            <div class="flex text-[#D4AF37]">
+                                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                            </div>
+                            <span class="text-sm font-semibold text-gray-700">4.7</span>
+                            <span class="text-gray-400">|</span>
+                            <span class="text-sm text-gray-600">292 ratings</span>
+                        </div>
+
+                        <h2 class="font-serif-display text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
+                            Adilqadri The Story Luxury Attar Perfume
+                        </h2>
+
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-[#D4AF37]/10 text-[#B8941F] rounded-full text-sm font-medium border border-[#D4AF37]/20">Non-Alcoholic</span>
+                            <span class="px-3 py-1 bg-[#D4AF37]/10 text-[#B8941F] rounded-full text-sm font-medium border border-[#D4AF37]/20">French</span>
+                            <span class="px-3 py-1 bg-[#D4AF37]/10 text-[#B8941F] rounded-full text-sm font-medium border border-[#D4AF37]/20">Roll-On</span>
+                            <span class="px-3 py-1 bg-[#D4AF37]/10 text-[#B8941F] rounded-full text-sm font-medium border border-[#D4AF37]/20">Long Lasting</span>
+                        </div>
+
+                        <div class="pt-4 border-t border-gray-200">
+                            <div class="flex items-baseline gap-3 mb-2">
+                                <span class="font-serif-display text-4xl font-bold text-gradient-gold">₹399</span>
+                                <span class="price-cut text-xl">₹599</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="bg-red-100 text-red-700 px-2 py-1 rounded text-sm font-bold">33% off</span>
+                                <span class="text-sm text-gray-500">MRP Inclusive Of All Taxes</span>
+                            </div>
+                        </div>
+
+                        <a href="/The-Story-Luxury" class="btn-gold inline-block w-full md:w-auto px-10 py-4 text-white font-semibold rounded-full text-center tracking-wide uppercase text-sm shadow-xl hover:shadow-2xl">
+                            Buy Now
+                        </a>
+                    </div>
+
+                    <!-- Image Gallery -->
+                    <div class="space-y-4 order-1 md:order-2">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="overflow-hidden rounded-xl bg-white shadow-md col-span-2">
+                                <img src="https://www.adilqadri.com/cdn/shop/files/WhatsApp_Image_2025-07-27_at_12.25.04_AM_1.jpg?v=1755198327&width=1200" 
+                                     alt="The Story Main" 
+                                     class="gallery-img w-full h-64 object-cover cursor-pointer"
+                                     onclick="openLightbox(this.src)">
+                            </div>
+                            <div class="overflow-hidden rounded-lg bg-white shadow-md">
+                                <img src="https://www.adilqadri.com/cdn/shop/files/1_d8761dc3-bfaa-4c76-8bd0-d0dce49b96ce.jpg?v=1755198327&width=1000" 
+                                     alt="The Story Detail 1" 
+                                     class="gallery-img w-full h-40 object-cover cursor-pointer"
+                                     onclick="openLightbox(this.src)">
+                            </div>
+                            <div class="overflow-hidden rounded-lg bg-white shadow-md">
+                                <img src="https://www.adilqadri.com/cdn/shop/files/2_97e06864-de47-423e-a336-fc53a4c97528.jpg?v=1755198327&width=500" 
+                                     alt="The Story Detail 2" 
+                                     class="gallery-img w-full h-40 object-cover cursor-pointer"
+                                     onclick="openLightbox(this.src)">
+                            </div>
+                        </div>
+                        <div class="overflow-hidden rounded-lg bg-white shadow-lg border-2 border-[#D4AF37]/20">
+                            <img src="https://www.adilqadri.com/cdn/shop/files/thestoryboxandbottlepng.png?v=1755196743&width=500" 
+                                 alt="The Story Packaging" 
+                                 class="gallery-img w-full h-48 object-contain bg-gradient-to-b from-white to-[#F4E8C1]/20 cursor-pointer p-4"
+                                 onclick="openLightbox(this.src)">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product 3: Shanaya Gold -->
+        <section class="reveal">
+            <div class="luxury-card rounded-2xl p-6 md:p-10 border-2 border-[#D4AF37]/40 relative overflow-hidden">
+                <!-- Gold Edition Badge -->
+                <div class="absolute -top-1 -right-1 bg-gradient-to-br from-[#D4AF37] to-[#B8941F] text-white px-6 py-2 rounded-bl-2xl font-serif-display font-bold shadow-lg z-10">
+                    GOLD EDITION
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <!-- Image Gallery -->
+                    <div class="space-y-4">
+                        <div class="relative overflow-hidden rounded-xl bg-gradient-to-br from-[#F4E8C1] to-white shadow-inner p-2">
+                            <img src="https://www.adilqadri.com/cdn/shop/files/WhatsApp_Image_2025-07-27_at_12.25.05_AM_2.jpg?v=1753556411&width=1000" 
+                                 alt="Shanaya Gold Main" 
+                                 class="gallery-img w-full h-96 object-cover rounded-lg cursor-pointer"
+                                 onclick="openLightbox(this.src)">
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="overflow-hidden rounded-lg bg-white shadow-md border border-[#D4AF37]/20">
+                                <img src="https://www.adilqadri.com/cdn/shop/files/shanayagoldboxandbottlee_1.png?v=1753556411&width=1000" 
+                                     alt="Shanaya Gold Packaging" 
+                                     class="gallery-img w-full h-48 object-contain bg-gradient-to-b from-white to-[#F4E8C1]/10 cursor-pointer p-2"
+                                     onclick="openLightbox(this.src)">
+                            </div>
+                            <div class="overflow-hidden rounded-lg bg-white shadow-md">
+                                <img src="https://www.adilqadri.com/cdn/shop/files/1_5a9f0b18-118c-459d-ae2b-4f590003c3d7.jpg?v=1754128614&width=900" 
+                                     alt="Shanaya Gold Detail" 
+                                     class="gallery-img w-full h-48 object-cover cursor-pointer"
+                                     onclick="openLightbox(this.src)">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Details -->
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-2 mb-2">
+                            <div class="flex text-[#D4AF37]">
+                                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                            </div>
+                            <span class="text-sm font-semibold text-gray-700">4.8</span>
+                            <span class="text-gray-400">|</span>
+                            <span class="text-sm text-gray-600">674 ratings</span>
+                        </div>
+
+                        <h2 class="font-serif-display text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
+                            Adilqadri Shanaya Gold <span class="text-gradient-gold">Luxury Gourmand</span> Attar Perfume
+                        </h2>
+
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-[#D4AF37]/20 text-[#B8941F] rounded-full text-sm font-medium border border-[#D4AF37]/30">Non-Alcoholic</span>
+                            <span class="px-3 py-1 bg-[#D4AF37]/20 text-[#B8941F] rounded-full text-sm font-medium border border-[#D4AF37]/30">Unisex</span>
+                            <span class="px-3 py-1 bg-[#D4AF37]/20 text-[#B8941F] rounded-full text-sm font-medium border border-[#D4AF37]/30">Roll-On</span>
+                            <span class="px-3 py-1 bg-[#D4AF37]/20 text-[#B8941F] rounded-full text-sm font-medium border border-[#D4AF37]/30">Arabic</span>
+                            <span class="px-3 py-1 bg-gradient-to-r from-[#D4AF37] to-[#B8941F] text-white rounded-full text-sm font-bold shadow-md">Gold Edition</span>
+                        </div>
+
+                        <div class="pt-4 border-t border-gray-200">
+                            <div class="flex items-baseline gap-3 mb-2">
+                                <span class="font-serif-display text-4xl font-bold text-gradient-gold">₹399</span>
+                                <span class="price-cut text-xl">₹599</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="bg-red-100 text-red-700 px-2 py-1 rounded text-sm font-bold">33% off</span>
+                                <span class="text-sm text-gray-500">MRP Inclusive Of All Taxes</span>
+                            </div>
+                        </div>
+
+                        <a href="/Shanaya-Gold-Luxury" class="btn-gold inline-block w-full md:w-auto px-10 py-4 text-white font-semibold rounded-full text-center tracking-wide uppercase text-sm shadow-xl hover:shadow-2xl">
+                            Buy Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#1A1A1A] text-white mt-20 py-12 px-4 md:px-8 lg:px-16 border-t-4 border-[#D4AF37]">
+        <div class="max-w-7xl mx-auto text-center">
+            <img src="https://www.adilqadri.com/cdn/shop/files/Logo.png?v=1694244694&width=280" 
+                 alt="Adilqadri" 
+                 class="h-12 w-auto mx-auto mb-6 opacity-90">
+            <p class="font-serif-elegant text-[#D4AF37] text-lg italic mb-4">Luxury Attar Perfumes</p>
+            <p class="text-gray-400 text-sm">© 2026 Adilqadri. All rights reserved.</p>
+            <div class="mt-6 flex justify-center gap-6 text-sm text-gray-400">
+                <a href="#" class="hover:text-[#D4AF37] transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-[#D4AF37] transition-colors">Terms of Service</a>
+                <a href="#" class="hover:text-[#D4AF37] transition-colors">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 bg-black/95 z-50 hidden flex items-center justify-center p-4 backdrop-blur-sm" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="Full view" class="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl border-2 border-[#D4AF37]/30">
+        <button class="absolute top-4 right-4 text-white text-2xl hover:text-[#D4AF37] transition-colors" onclick="closeLightbox()">✕</button>
+    </div>
+
+    <script>
+        // Scroll Reveal Animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+
+        // Lightbox Functions
+        function openLightbox(src) {
+            const lightbox = document.getElementById('lightbox');
+            const img = document.getElementById('lightbox-img');
+            img.src = src;
+            lightbox.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close lightbox on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeLightbox();
+        });
+
+        // Smooth parallax effect on scroll
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelectorAll('.gallery-img');
+            parallax.forEach((el) => {
+                const speed = 0.5;
+                el.style.transform = `translateY(${scrolled * speed * 0.1}px)`;
+            });
+        });
+    </script>
+</body>
+</html>
